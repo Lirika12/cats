@@ -16,7 +16,15 @@
    <script defer src="./index.js"></script>
  </head>
  <body>
-   <h1>Милые котики</h1>
-   <div class="cats-wrapper"></div>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Милые котики</h1>
+
+    <div class="d-flex justify-content-center mb-5">
+      <button data-add_button class="btn btn-success">Add</button>
+    </div>
+
+    <!-- сюда вставляются коты -->
+    <div data-wrapper class="d-flex justify-content-center"></div>
+  </div>
  </body>
 </html>
