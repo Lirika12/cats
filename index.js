@@ -12,3 +12,15 @@ const gerenationCatCard = (cat) => `<div data-card_id=${cat.id} class="card mx-2
   <button data-action="delete" class="btn btn-danger">Delete</button>
 </div>
 </div>`
+
+api.getCats()
+  .then((responce) => {
+    return responce.json()
+  })
+  .then((data) => {
+    setTimeout(() => {
+      data.forEach(cat => {
+        $wrapper.insertAdjacentHTML('beforeend', gerenationCatCard(cat))
+      })
+    }, 2000);
+  });
